@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+
+
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="280dp"
+          android:layout_marginTop="-20dp"
+          android:scaleType="centerCrop"
+          android:src="@drawable/ui_i" />
+
+      <com.google.android.material.appbar.AppBarLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:background="@color/colorT">
+
+          <com.google.android.material.appbar.CollapsingToolbarLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:layout_scrollFlags="scroll|enterAlwaysCollapsed|enterAlways">
+
+              <View
+                  android:layout_width="match_parent"
+                  android:layout_height="220dp" />
+
+
+          </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+      </com.google.android.material.appbar.AppBarLayout>
+
+
+      <androidx.core.widget.NestedScrollView
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+          <androidx.cardview.widget.CardView
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              app:cardBackgroundColor="@color/colorWhite"
+              app:cardCornerRadius="20dp">
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_horizontal|top"
+                  android:orientation="vertical">
+
+                  <View
+                      android:layout_width="100dp"
+                      android:layout_height="3dp"
+                      android:layout_marginTop="8dp"
+                      android:background="@drawable/rounded_corners_all" />
+
+
+              </LinearLayout>
+
+              <LinearLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:layout_marginTop="5dp"
+                  android:orientation="vertical"
+                  android:padding="@dimen/normal_padding">
+
+                  <TextView
+                      android:id="@+id/dt_country"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:background="@drawable/rounded"
+                      android:gravity="center"
+                      android:padding="@dimen/normal_padding"
+                      android:text="Muhammad Akli Adnan (123180015)"></TextView>
+
+                  <androidx.recyclerview.widget.RecyclerView
+                      android:id="@+id/lv_item"
+                      android:layout_marginTop="10dp"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      tools:listitem="@layout/list_view" />
+
+              </LinearLayout>
+
+          </androidx.cardview.widget.CardView>
+
+      </androidx.core.widget.NestedScrollView>
+
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
